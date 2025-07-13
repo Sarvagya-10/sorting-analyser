@@ -1,0 +1,74 @@
+You are to create a complete Python Streamlit app called **"Sorting Analyser"** that allows users to visualize, compare, and analyze the time and space complexities of various sorting algorithms.
+
+**Requirements:**
+
+1️⃣ **Sorting Algorithms**
+- Implement at least these sorting algorithms from scratch: Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, Quick Sort, Heap Sort.
+- Each algorithm must be fully instrumented to:
+   - Count the total number of comparisons.
+   - Count the total number of swaps or assignments.
+   - Measure the total runtime in milliseconds or seconds.
+   - Track peak memory usage during execution using Python’s `tracemalloc` module.
+- Use decorators or context managers to handle timing and memory profiling cleanly.
+
+2️⃣ **Input Generator**
+- Include functions to generate test input arrays:
+   - Random: integers within a user-defined range.
+   - Sorted: already sorted in ascending order.
+   - Reverse sorted: sorted in descending order.
+   - Nearly sorted: mostly sorted with a small percentage of shuffled elements.
+- Let the user choose:
+   - Input size (minimum 10 to maximum 10,000 elements, adjustable with a slider).
+   - Input type (dropdown or radio button).
+
+3️⃣ **Benchmarking Framework**
+- Allow the user to select multiple algorithms to run in one session.
+- Run each algorithm multiple times (user sets the number of repetitions for averaging).
+- Store all results (time, comparisons, swaps, peak memory) in a Pandas DataFrame.
+- Show detailed stats: average, min, max, and standard deviation if possible.
+
+4️⃣ **Visualization & Charts**
+- Use Matplotlib or Plotly for visualizations.
+- Include at least these charts:
+   - **Runtime vs. Input Size:** Line chart comparing different algorithms.
+   - **Comparisons vs. Input Size:** Shows how the number of comparisons grows.
+   - **Swaps/Assignments vs. Input Size:** Separate or combined with comparisons.
+   - **Peak Memory Usage vs. Input Size:** To demonstrate space complexity.
+   - Optionally overlay theoretical Big O curves for Bubble Sort (O(n²)) and Merge Sort / Quick Sort (O(n log n)) for reference.
+
+5️⃣ **Streamlit User Interface**
+- Create a clear, user-friendly layout:
+   - **Sidebar**:
+     - App title and description.
+     - Multi-select box for choosing which sorting algorithms to run.
+     - Sliders for input size and number of repetitions.
+     - Dropdown or radio buttons for input type.
+     - A “Run Analysis” button to start benchmarking.
+   - **Main page**:
+     - Preview of the generated input array (show the first few elements).
+     - Table of detailed statistics for each algorithm.
+     - Interactive charts with legends and tooltips.
+     - Download button to export results as CSV.
+
+6️⃣ **Extra Features (Optional but Recommended)**
+- Show warnings for very large input sizes that may cause the browser to freeze.
+- Use `st.spinner` or `st.progress` to indicate benchmarking is running.
+- Write clean, modular code with reusable functions or classes for algorithms, profiling, and plotting.
+- Add docstrings and inline comments explaining how each algorithm and profiler works.
+- Make sure the app runs smoothly on Replit’s hosted environment.
+- Include a `.replit` file or `replit.nix` if needed to run Streamlit commands automatically.
+- Use `requirements.txt` with dependencies: `streamlit`, `pandas`, `numpy`, `matplotlib` or `plotly`.
+
+7️⃣ **Code Output**
+- Provide the entire project in a single file called `sorting_analyser.py`.
+- Make sure it runs with `streamlit run sorting_analyser.py`.
+- The code must be ready to deploy on Streamlit Cloud with minimal edits.
+
+
+
+---
+
+📌 **Goal:**  
+The final Streamlit app should help the user understand how different sorting algorithms behave in terms of time and space complexity under various input conditions and sizes, with clear, interactive visualizations and detailed stats.
+
+Please output only the complete Python code with all these requirements implemented.
